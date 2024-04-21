@@ -11,3 +11,6 @@ insert into article_comment (article_id, content, created_at, created_by, modifi
 insert into article_comment (article_id, content, created_at, created_by, modified_at, modified_by) values (5, 'Nulla ac enim.', '2023-10-09 03:46:08', 'Willamina', '2023-09-25 06:56:51', 'Jeannette');
 insert into article_comment (article_id, content, created_at, created_by, modified_at, modified_by) values (1, 'Nunc rhoncus dui vel sem.', '2023-12-11 12:38:40', 'Evonne', '2023-10-08 01:22:08', 'Roman');
 insert into article_comment (article_id, content, created_at, created_by, modified_at, modified_by) values (1, 'Suspendisse potenti.', '2023-06-27 10:22:20', 'Orson', '2023-12-22 07:49:55', 'Osbert');
+
+-- user mock data - 테스트 유저 1명
+insert into user(user_id, user_password, nickname, email, memo, created_at, created_by, modified_at, modified_by) values ('user01', 'user01', 'user01', 'user01@email.com', 'developer', now(), 'user01', now(), 'user01');
