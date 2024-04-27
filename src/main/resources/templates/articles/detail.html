@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>게시글</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <header th:replace="~{header::header}"></header>
+
+    <main class="container">
+
+        <!-- 게시글 제목 -->
+        <h4 class="mb-3">1번</h4>
+
+        <div class="row g-5">
+            <div class="col-md-5 col-lg-4 order-md-last">
+                <!-- 게시글 정보 -->
+                <ul class="list-group mb-3">
+                    <li class="list-group-item d-flex justify-content-between lh-sm">
+                        <div>
+                            <h6 class="my-0">작성자</h6>
+                            <!-- <small class="text-muted">닉네임</small> -->
+                        </div>
+                        <span class="text-muted">닉네임</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-sm">
+                        <div>
+                            <h6 class="my-0">작성일시</h6>
+                        </div>
+                        <span class="text-muted"><time datetime="2024-04-01T00:00:00">2024-04-21</time></span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-sm">
+                        <div>
+                            <h6 class="my-0">해시태그</h6>
+                        </div>
+                        <span class="text-muted">#hashtag</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- 게시글 내용 -->
+            <div class="col-md-7 col-lg-8">
+                <!-- 게시글 -->
+                <p>
+                    When you believe in a thing, believe in it all the way, implicitly and unquestionable. - Walt Disney <br>
+                    Never say goodbye because goodbye means going away and going away means forgetting. - Peter Pan <br>
+                    Some people are worth melting for. - Frozen(Olaf) <br>
+                    The flower that blooms in adversity is the most rare and beautiful of all. - Mulan <br>
+                    If you focus on what you left behind, you will never see what lies ahead. - Ratatouille <br>
+                    The past can hurt. But from the way I see it, you can either run from it, or learn from it. - Lion King
+                </p>
+            </div>
+        </div>
+
+        <!-- 구분선 -->
+        <hr class="my-4">
+
+        <!-- 댓글 -->
+        <ul class="list-group mb-3">
+            <li class="list-group-item d-flex justify-content-between lh-sm">
+                <div>
+                    <strong>닉네임</strong>
+                    <time datetime="2024-04-01T00:00:00"><small>2024-04-21</small></time>
+                    <p>댓글</p>
+                </div>
+            </li>
+            <li class="list-group-item d-flex justify-content-between lh-sm">
+                <div>
+                    <strong>닉네임</strong>
+                    <time datetime="2024-04-01T00:00:00"><small>2024-04-21</small></time>
+                    <p>댓글</p>
+                </div>
+            </li>
+        </ul>
+
+        <form class="card p-2 w-100">
+            <div class="input-group">
+                <label for="comment-content" hidden>댓글</label>
+                <input id="comment-content" type="text" class="form-control" placeholder="댓글을 입력하세요.">
+                <button type="submit" class="btn btn-secondary">저장</button>
+            </div>
+        </form>
+
+        <!-- navigation bar -->
+        <nav>
+            <ul class="pagination justify-content-center mt-5">
+                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            </ul>
+        </nav>
+    </main>
+
+    <footer th:replace="~{footer::footer}"></footer>
+</body>
+</html>
